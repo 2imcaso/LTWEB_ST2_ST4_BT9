@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/layout}">
+<head><title>Dashboard</title></head>
+<body>
+<main class="dashboard-page" layout:fragment="content">
+    <section class="dashboard-heading"><h1>Dashboard</h1></section>
+    <section class="dashboard-stats" aria-label="Thống kê hệ thống">
+        <article class="stat-card"><span>Tổng người dùng</span><strong th:text="${userCount}">0</strong></article>
+        <article class="stat-card"><span>Tổng sản phẩm</span><strong th:text="${productCount}">0</strong></article>
+    </section>
+    <section class="dashboard-actions">
+        <a class="btn primary" th:href="@{/products}">Quản lý sản phẩm</a>
+        <a class="btn secondary" th:href="@{/users}">Quản lý người dùng</a>
+    </section>
+</main>
+</body>
+</html>

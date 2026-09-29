@@ -1,0 +1,2 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/layout}"><head><title>Dashboard</title></head><body><main class="container" layout:fragment="content"><section class="panel"><h1>Dashboard</h1><p>Bạn đã đăng nhập với quyền quản trị viên.</p><dl><dt>Họ tên</dt><dd th:text="${currentUser.fullName}"></dd><dt>Email</dt><dd th:text="${currentUser.email}"></dd><dt>Quyền</dt><dd th:text="${currentUser.roleName}"></dd></dl></section></main></body></html>

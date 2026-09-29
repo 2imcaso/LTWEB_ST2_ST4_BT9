@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layout}">
+<head>
+<title>Trang chủ</title>
+</head>
+<body>
+	<main class="container" layout:fragment="content">
+		<section class="panel">
+			<h1>Chào mừng đến UTEShop</h1>
+			<p>Ví dụ 3 — đăng nhập với Spring Security.</p>
+			<p th:if="${currentUser != null}">
+				Xin chào <strong th:text="${currentUser.fullName}"></strong>!
+			</p>
+			<a class="btn primary" th:if="${currentUser == null}"
+				th:href="@{/login}">Đăng nhập</a>
+		</section>
+	</main>
+</body>
+</html>

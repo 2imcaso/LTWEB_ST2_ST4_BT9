@@ -1,0 +1,2 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"><head th:replace="~{layouts/layout :: head('Trang chủ')}"></head><body><header th:replace="~{fragments/header :: header}"></header><main class="container"><section class="panel"><h1>Chào mừng đến IOTSTAR SHOP</h1><p>Ví dụ 1 — đăng nhập với Spring Security.</p><p th:if="${currentUser != null}">Xin chào <strong th:text="${currentUser.fullName}"></strong>!</p><a class="btn primary" th:if="${currentUser == null}" th:href="@{/login}">Đăng nhập</a></section></main></body></html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layouts/layout :: head('Dashboard')}"></head>
+<body>
+	<header th:replace="~{fragments/header :: header}"></header>
+	<main class="container">
+		<section class="panel">
+			<h1>Dashboard</h1>
+			<p>Bạn đã đăng nhập với quyền quản trị viên.</p>
+			<dl>
+				<dt>Họ tên</dt>
+				<dd th:text="${currentUser.fullName}"></dd>
+				<dt>Email</dt>
+				<dd th:text="${currentUser.email}"></dd>
+				<dt>Quyền</dt>
+				<dd th:text="${currentUser.roleName}"></dd>
+			</dl>
+		</section>
+	</main>
+</body>
+</html>

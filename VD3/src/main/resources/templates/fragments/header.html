@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header" class="topbar">
+    <a class="brand" th:href="@{/}">UTEShop</a>
+    <nav>
+        <a th:if="${currentUser != null and currentUser.roleName == 'ADMIN'}" th:href="@{/dashboard}">Dashboard</a>
+        <a th:if="${currentUser != null}" th:href="@{/products}">Sản phẩm</a>
+        <a th:if="${currentUser != null and currentUser.roleName == 'ADMIN'}" th:href="@{/users}">Người dùng</a>
+    </nav>
+    <div class="account" th:if="${currentUser != null}">
+        <img class="avatar header-avatar" th:src="${#strings.isEmpty(currentUser.images) ? '/images/avatar-default.svg' : currentUser.images}" alt="Ảnh đại diện" width="28" height="28">
+        <strong th:text="${currentUser.fullName}"></strong>
+        <span class="account-email" th:text="${currentUser.email}"></span>
+        <form th:action="@{/logout}" method="post"><button class="link-button" type="submit">Đăng xuất</button></form>
+    </div>
+    <a class="login-link" th:unless="${currentUser != null}" th:href="@{/login}">Đăng nhập</a>
+</header>
+</body>
+</html>

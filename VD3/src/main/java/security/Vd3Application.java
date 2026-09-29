@@ -1,0 +1,7 @@
+package security;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+@SpringBootApplication
+public class Vd3Application {
+    public static void main(String[] args) { SpringApplication.run(Vd3Application.class, args); }
+}
